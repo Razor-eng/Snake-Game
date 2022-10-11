@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url("bg.jpg");
+    background-size: 100vw 100vh;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(167, 235, 167),rgb(229, 229, 117));
+    width: 90vmin;
+    height: 92vmin;
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+}
+.head{
+    background: rgb(108, 7, 7);
+    transform: scale(1.02);
+    border-radius: 6px;
+    border: 2px solid purple;
+}
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+.food{
+    background: linear-gradient(rgb(78, 211, 12),rgb(206, 72, 206)) ;
+    border: .25vmin solid black;
+    border-radius: 11px;
+}
+.imgbox img{
+    width: 0px;
+    position: absolute;
+    right: 36%;
+    top: 209px;
+    transition: width 1s ease-in-out;
+}
+@media screen and (max-width: 1013px) {
+    .body{
+        flex-wrap: wrap;
+    }
+    #board{
+        position: absolute;
+        left: 22px;
+        width: 70vmin;
+        height: 95vmin;
+    }
+    #scoreBox{
+        flex-wrap: wrap;
+        right: 50px;
+        font-size: 1.4rem;
+    }
+    #hiscoreBox{
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+        right: 50px;
+    }
+    .imgbox img{
+        left: 54%;
+        top: 84px;
+    }
+}
+@media screen and (max-width: 1414px) and (min-width: 1013px) {
+
+    #board{
+        position: absolute;
+        left: 22px;
+        width: 90vmin;
+        height: 95vmin;
+    }
+    #scoreBox{
+        flex-wrap: wrap;
+        font-size: 2.3rem;
+    }
+    #hiscoreBox{
+        flex-wrap: wrap;
+        font-size: 2.3rem;
+    }
+    .imgbox img{
+        left: 55%;
+        top: 99px;
+        transition: width 1s ease-in-out;
+    }
+}
